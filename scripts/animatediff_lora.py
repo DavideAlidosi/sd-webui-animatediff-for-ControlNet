@@ -4,7 +4,6 @@ import sys
 
 from modules import sd_models, shared
 from modules.paths import extensions_builtin_dir
-
 from scripts.animatediff_logger import logger_animatediff as logger
 
 sys.path.append(f"{extensions_builtin_dir}/Lora")
@@ -20,8 +19,7 @@ class AnimateDiffLora:
             return
 
         logger.info("Hacking lora to support motion lora")
-        import network
-        import networks
+        import network, networks
         self.original_load_network = networks.load_network
         original_load_network = self.original_load_network
 

@@ -136,7 +136,7 @@ class TemporalTransformer3DModel(nn.Module):
         self.proj_out = nn.Linear(inner_dim, in_channels)    
     
     def forward(self, hidden_states, encoder_hidden_states=None, attention_mask=None):
-        video_length = hidden_states.shape[0] // (2 if shared.opts.batch_cond_uncond else 1)
+        video_length = hidden_states.shape[0] // 2 # TODO: config this value in scripts
         batch, channel, height, weight = hidden_states.shape
         residual = hidden_states
 
