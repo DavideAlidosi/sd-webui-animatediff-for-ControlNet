@@ -26,7 +26,7 @@ class AnimateDiffScript(scripts.Script):
 
 
     def title(self):
-        return "AnimateDiff"
+        return "AnimateDiff v1.6.0 for ControlNet"
 
 
     def show(self, is_img2img):

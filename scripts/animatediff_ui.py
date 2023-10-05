@@ -76,7 +76,7 @@ class AnimateDiffUiGroup:
         if not os.path.isdir(model_dir):
             os.mkdir(model_dir)
         model_list = [f for f in os.listdir(model_dir) if f != ".gitkeep"]
-        with gr.Accordion("AnimateDiff", open=False):
+        with gr.Accordion("AnimateDiff v1.6.0 for ControlNet", open=False):
             with gr.Row():
 
                 def refresh_models(*inputs):
